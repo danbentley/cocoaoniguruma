@@ -1,9 +1,5 @@
-//
-//  CocoaOniguruma.h
-//  CocoaOniguruma
-//
-//  Created by Dan Bentley on 13/05/2016.
-//
+// CocoaOniguruma is copyrighted free software by Satoshi Nakagawa <psychs AT limechat DOT net>.
+// You can redistribute it and/or modify it under the new BSD license.
 
 #ifndef CocoaOniguruma_h
 #define CocoaOniguruma_h
