@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76290F8A1CE5EAD7009657CE /* CocoaOniguruma.h in Headers */ = {isa = PBXBuildFile; fileRef = 76290F891CE5EA67009657CE /* CocoaOniguruma.h */; };
 		7807AC380E2FBB8600A5AB6A /* OnigRegexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807AC1A0E2FBB8600A5AB6A /* OnigRegexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7807AC390E2FBB8600A5AB6A /* OnigRegexp.m in Sources */ = {isa = PBXBuildFile; fileRef = 7807AC1B0E2FBB8600A5AB6A /* OnigRegexp.m */; };
 		7807AC3A0E2FBB8600A5AB6A /* OnigRegexpUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807AC1C0E2FBB8600A5AB6A /* OnigRegexpUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* CocoaOniguruma_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOniguruma_Prefix.pch; sourceTree = "<group>"; };
+		76290F891CE5EA67009657CE /* CocoaOniguruma.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaOniguruma.h; sourceTree = "<group>"; };
 		7807AC1A0E2FBB8600A5AB6A /* OnigRegexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnigRegexp.h; sourceTree = "<group>"; };
 		7807AC1B0E2FBB8600A5AB6A /* OnigRegexp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnigRegexp.m; sourceTree = "<group>"; };
 		7807AC1C0E2FBB8600A5AB6A /* OnigRegexpUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnigRegexpUtility.h; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				76290F891CE5EA67009657CE /* CocoaOniguruma.h */,
 				7807AC190E2FBB8600A5AB6A /* core */,
 				78C5E1BA0E39CDFA00F62F5D /* tests */,
 				78C5E3DD0E39E45200F62F5D /* testcommand */,
@@ -253,6 +256,7 @@
 				7807AC380E2FBB8600A5AB6A /* OnigRegexp.h in Headers */,
 				7807AC3A0E2FBB8600A5AB6A /* OnigRegexpUtility.h in Headers */,
 				7807AC3C0E2FBB8600A5AB6A /* config.h in Headers */,
+				76290F8A1CE5EAD7009657CE /* CocoaOniguruma.h in Headers */,
 				7807AC440E2FBB8600A5AB6A /* oniguruma.h in Headers */,
 				7807AC470E2FBB8600A5AB6A /* regenc.h in Headers */,
 				7807AC4B0E2FBB8600A5AB6A /* regint.h in Headers */,
