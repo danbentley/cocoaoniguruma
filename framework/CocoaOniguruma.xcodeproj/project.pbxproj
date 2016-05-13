@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76290F8A1CE5EAD7009657CE /* CocoaOniguruma.h in Headers */ = {isa = PBXBuildFile; fileRef = 76290F891CE5EA67009657CE /* CocoaOniguruma.h */; };
+		76290F8A1CE5EAD7009657CE /* CocoaOniguruma.h in Headers */ = {isa = PBXBuildFile; fileRef = 76290F891CE5EA67009657CE /* CocoaOniguruma.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7807AC380E2FBB8600A5AB6A /* OnigRegexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807AC1A0E2FBB8600A5AB6A /* OnigRegexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7807AC390E2FBB8600A5AB6A /* OnigRegexp.m in Sources */ = {isa = PBXBuildFile; fileRef = 7807AC1B0E2FBB8600A5AB6A /* OnigRegexp.m */; };
 		7807AC3A0E2FBB8600A5AB6A /* OnigRegexpUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807AC1C0E2FBB8600A5AB6A /* OnigRegexpUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -253,10 +253,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76290F8A1CE5EAD7009657CE /* CocoaOniguruma.h in Headers */,
 				7807AC380E2FBB8600A5AB6A /* OnigRegexp.h in Headers */,
 				7807AC3A0E2FBB8600A5AB6A /* OnigRegexpUtility.h in Headers */,
 				7807AC3C0E2FBB8600A5AB6A /* config.h in Headers */,
-				76290F8A1CE5EAD7009657CE /* CocoaOniguruma.h in Headers */,
 				7807AC440E2FBB8600A5AB6A /* oniguruma.h in Headers */,
 				7807AC470E2FBB8600A5AB6A /* regenc.h in Headers */,
 				7807AC4B0E2FBB8600A5AB6A /* regint.h in Headers */,
