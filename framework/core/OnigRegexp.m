@@ -135,6 +135,8 @@ static int captureNameCallback(const OnigUChar* name, const OnigUChar* end, int 
                               syntax,
                               &err);
     }
+
+    str = NULL;
     
     if (status == ONIG_NORMAL) {
         OnigRegexp* regexp = [[self alloc] initWithEntity:entity expression:expression];
@@ -184,7 +186,9 @@ static int captureNameCallback(const OnigUChar* name, const OnigUChar* end, int 
                              str + end * CHAR_SIZE,
                              region,
                              ONIG_OPTION_NONE);
-    
+
+    str = NULL;
+
     if (status != ONIG_MISMATCH) {
         OnigResult* result = [[OnigResult alloc] initWithRegexp:self region:region target:target];
 #if !__has_feature(objc_arc)
@@ -221,7 +225,9 @@ static int captureNameCallback(const OnigUChar* name, const OnigUChar* end, int 
                             str + start * CHAR_SIZE,
                             region,
                             ONIG_OPTION_NONE);
-    
+
+    str = NULL;
+
     if (status != ONIG_MISMATCH) {
         OnigResult* result = [[OnigResult alloc] initWithRegexp:self region:region target:target];
 #if !__has_feature(objc_arc)
