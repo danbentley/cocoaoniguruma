@@ -210,10 +210,21 @@ static int captureNameCallback(const OnigUChar* name, const OnigUChar* end, int 
 
 - (OnigResult*)match:(NSString*)target start:(int)start
 {
-    if (!target) return nil;
-    
-    OnigRegion* region = onig_region_new();
     const UChar* str = (const UChar*)[target cStringUsingEncoding:STRING_ENCODING];
+    return [self matchWithCString:str andString:target start:0];
+}
+
+- (OnigResult*)matchWithCString:(const UChar *)cstring andString:(NSString*)target
+{
+    return [self matchWithCString:cstring andString:target start:0];
+}
+
+- (OnigResult*)matchWithCString:(const UChar *)cstring andString:(NSString*)target start:(int)start
+{
+    if (!target) return nil;
+
+    const UChar *str = cstring;
+    OnigRegion* region = onig_region_new();
     
     int status = onig_match(_entity,
                             str,

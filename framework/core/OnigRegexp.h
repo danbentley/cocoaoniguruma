@@ -53,6 +53,9 @@ typedef enum {
 - (OnigResult*)match:(NSString*)target;
 - (OnigResult*)match:(NSString*)target start:(int)start;
 
+- (OnigResult*)matchWithCString:(const UChar *)cstring andString:(NSString*)target;
+- (OnigResult*)matchWithCString:(const UChar *)cstring andString:(NSString*)target start:(int)start;
+
 - (NSUInteger)captureCount;
 - (NSString*)expression;
 
