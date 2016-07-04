@@ -171,11 +171,33 @@ static int captureNameCallback(const OnigUChar* name, const OnigUChar* end, int 
 
 - (OnigResult*)search:(NSString*)target start:(int)start end:(int)end
 {
+    const UChar* str = (const UChar*)[target cStringUsingEncoding:STRING_ENCODING];
+    return [self searchWithCString:str andString:target start:start end:end];
+}
+
+- (OnigResult*)search:(NSString*)target range:(NSRange)range
+{
+    return [self search:target start:(int) range.location end:(int) NSMaxRange(range)];
+}
+
+- (OnigResult*)searchWithCString:(const UChar *)cstring andString:(NSString*)target
+{
+    return [self searchWithCString:cstring andString:target start:0 end:-1];
+}
+
+- (OnigResult*)searchWithCString:(const UChar *)cstring andString:(NSString*)target start:(int)start
+{
+    return [self searchWithCString:cstring andString:target start:start end:-1];
+}
+
+- (OnigResult*)searchWithCString:(const UChar *)cstring andString:(NSString*)target start:(int)start end:(int)end
+{
     if (!target) return nil;
     if (end < 0) end = (int) [target length];
+
+    const UChar *str = cstring;
     
     OnigRegion* region = onig_region_new();
-    const UChar* str = (const UChar*)[target cStringUsingEncoding:STRING_ENCODING];
     
     int status = onig_search(_entity,
                              str,
@@ -198,9 +220,9 @@ static int captureNameCallback(const OnigUChar* name, const OnigUChar* end, int 
     }
 }
 
-- (OnigResult*)search:(NSString*)target range:(NSRange)range
+- (OnigResult*)searchWithCString:(const UChar *)cstring andString:(NSString*)target range:(NSRange)range
 {
-    return [self search:target start:(int) range.location end:(int) NSMaxRange(range)];
+    return [self searchWithCString:cstring andString:target start:(int) range.location end:(int) NSMaxRange(range)];
 }
 
 - (OnigResult*)match:(NSString*)target

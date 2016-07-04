@@ -50,9 +50,24 @@ typedef enum {
 - (OnigResult*)search:(NSString*)target start:(int)start end:(int)end;
 - (OnigResult*)search:(NSString*)target range:(NSRange)range;
 
+/**
+ * Creating a UChar string from an NSString can be very expensive. Allow the caller
+ * to create and cache the cstring to avoid needing to create it for all search*
+ * methods
+ */
+- (OnigResult*)searchWithCString:(const UChar *)cstring andString:(NSString*)target;
+- (OnigResult*)searchWithCString:(const UChar *)cstring andString:(NSString*)target start:(int)start;
+- (OnigResult*)searchWithCString:(const UChar *)cstring andString:(NSString*)target start:(int)start end:(int)end;
+- (OnigResult*)searchWithCString:(const UChar *)cstring andString:(NSString*)target range:(NSRange)range;
+
 - (OnigResult*)match:(NSString*)target;
 - (OnigResult*)match:(NSString*)target start:(int)start;
 
+/**
+ * Creating a UChar string from an NSString can be very expensive. Allow the caller
+ * to create and cache the cstring to avoid needing to create it for all match*
+ * methods
+ */
 - (OnigResult*)matchWithCString:(const UChar *)cstring andString:(NSString*)target;
 - (OnigResult*)matchWithCString:(const UChar *)cstring andString:(NSString*)target start:(int)start;
 
